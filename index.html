@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Train Time!</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assets/css/style.css"
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container text-center">
+		    <h1 class="display-3">Train Time!</h1>
+		    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+		  </div>
+		</div>
+
+		<div class="card">
+			<div class="card-header card-primary text-white">Current Train Schedule</div>
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th>#</th>
+			      <th>First Name</th>
+			      <th>Last Name</th>
+			      <th>Username</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">1</th>
+			      <td>Mark</td>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">2</th>
+			      <td>Jacob</td>
+			      <td>Thornton</td>
+			      <td>@fat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>Larry</td>
+			      <td>the Bird</td>
+			      <td>@twitter</td>
+			    </tr>
+			  </tbody>
+			</table>
+			</div>
+
+			<div class="card my-3">
+
+				<div class="card-header card-primary text-white">Add Train</div>
+
+				<div class="card-body">
+
+					<form class="p-3">
+
+						<div class="form-group row">
+						  <label for="train-name-input" class="col-2 col-form-label">Train Name</label>
+						  <div class="col-10">
+						    <input class="form-control" type="text" id="train-name-input">
+						  </div>
+						</div>
+						
+						<div class="form-group row">
+						  <label for="destination-input" class="col-2 col-form-label">Destination</label>
+						  <div class="col-10">
+						    <input class="form-control" type="text" id="destination-input">
+						  </div>
+						</div>
+						
+						<div class="form-group row">
+						  <label for="time-input" class="col-2 col-form-label">First Train Time</label>
+						  <div class="col-10">
+						    <input class="form-control" type="time" id="time-input">
+						  </div>
+						</div>
+
+						<div class="form-group row">
+						  <label for="frequency-input" class="col-2 col-form-label">Frequency (HH:mm - military time)</label>
+						  <div class="col-10">
+						    <input class="form-control" type="time" id="frequency-input">
+						  </div>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Submit</button>
+						
+					</form>
+				
+				</div>
+
+			</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script src="assets/javascript/app.js"></script>	
+</body>
+</html>
