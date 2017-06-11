@@ -6,6 +6,8 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">>
+
 <link rel="stylesheet" href="assets/css/style.css"
 
 <!-- jQuery -->
@@ -18,50 +20,56 @@
 
 	<div class="container">
 
-		<div class="jumbotron jumbotron-fluid">
+		<div class="jumbotron jumbotron-fluid" id="main-header">
 		  <div class="container text-center">
-		    <h1 class="display-3">Train Time!</h1>
-		    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+		    <h1 class="display-3 d-inline-block">Train Time!</h1>
+		    <img src="assets/images/train.png" class="d-inline-block" id="train">
 		  </div>
 		</div>
 
-		<div class="card">
-			<div class="card-header card-primary text-white">Current Train Schedule</div>
+		<div class="card" id="current-schedule">
+
+			<div class="card-header text-white" id="sch-header">Current Train Schedule</div>
+
 			<table class="table">
 			  <thead>
 			    <tr>
-			      <th>#</th>
-			      <th>First Name</th>
-			      <th>Last Name</th>
-			      <th>Username</th>
+			      <th>Train Name</th>
+			      <th>Destination</th>
+			      <th>Frequency (min)</th>
+			      <th>Next Arrival</th>
+			      <th>Minutes Away</th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Mark</td>
-			      <td>Otto</td>
-			      <td>@mdo</td>
+			    <tr>			     
+			      <td>Trenton Express</td>
+			      <td>Trenton</td>
+			      <td>17</td>
+			      <td>05:35 PM</td>
+			      <td>10</td>
 			    </tr>
-			    <tr>
-			      <th scope="row">2</th>
-			      <td>Jacob</td>
-			      <td>Thornton</td>
-			      <td>@fat</td>
+			    <tr>			      
+			      <td>Trenton Express</td>
+			      <td>Trenton</td>
+			      <td>17</td>
+			      <td>05:35 PM</td>
+			      <td>10</td>
 			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Larry</td>
-			      <td>the Bird</td>
-			      <td>@twitter</td>
+			    <tr>			 
+			      <td>Trenton Express</td>
+			      <td>Trenton</td>
+			      <td>17</td>
+			      <td>05:35 PM</td>
+			      <td>10</td>
 			    </tr>
 			  </tbody>
 			</table>
 			</div>
 
-			<div class="card my-3">
+			<div class="card my-3" id="add-train">
 
-				<div class="card-header card-primary text-white">Add Train</div>
+				<div class="card-header text-white" id="add-header">Add Train</div>
 
 				<div class="card-body">
 
@@ -95,7 +103,7 @@
 						  </div>
 						</div>
 
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn text-white" id="#submit">Submit</button>
 						
 					</form>
 				

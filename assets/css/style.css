@@ -1,0 +1,25 @@
+body {
+	background-color: black;
+}
+
+#main-header {
+	font-family: 'Monoton', cursive;
+	padding: 2rem;
+	background-color: #7b1580;
+	color: #e79917;
+}
+
+#train {
+	width: 12rem;
+	height: auto;
+}
+
+#sch-header, #add-header, button {
+	background-color: #7b1580;
+	border-bottom: solid 2px #e79917;
+}
+
+#current-schedule, #add-train {
+	border: solid 2px #e79917;
+}
+
