@@ -1,11 +1,11 @@
 body {
-	background-color: black;
+	background-image: url("../images/background.jpg") ;
 }
 
 #main-header {
 	font-family: 'Monoton', cursive;
 	padding: 2rem;
-	background-color: #7b1580;
+	background-color: transparent;
 	color: #e79917;
 }
 
@@ -14,12 +14,12 @@ body {
 	height: auto;
 }
 
-#sch-header, #add-header, button {
+#sch-header, #add-header, button, #banner {
 	background-color: #7b1580;
-	border-bottom: solid 2px #e79917;
+	
 }
 
 #current-schedule, #add-train {
-	border: solid 2px #e79917;
+	
 }
 
