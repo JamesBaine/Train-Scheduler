@@ -25,7 +25,7 @@ $("#add-train").on("click", function(){
 
 	name = $("#name-input").val().trim();
 	destination = $("#destination-input").val().trim();
-	firstTrain = $("#firstTrain-input").val().trim();
+	var firstTrain = moment($("#firstTrain-input").val().trim(), "HH:mm").subtract(10, "years").format("X");
 	frequency = $("#frequency-input").val().trim();
 	
 
@@ -45,7 +45,7 @@ $("#add-train").on("click", function(){
 
 });
 
-database.ref().on("child-added", function(snapshot){
+database.ref().on("child_added", function(snapshot){
 
 		console.log(snapshot.val());
 		console.log(snapshot.val().name);
@@ -53,8 +53,39 @@ database.ref().on("child-added", function(snapshot){
 		console.log(snapshot.val().firstTrain);
 		console.log(snapshot.val().frequency);
 
+		var newName = snapshot.val().name;
+		var newDestination = snapshot.val().destination;
+		var newFrequency = snapshot.val().frequency;
+		var newFirstTrain = snapshot.val().firstTrain;
+
+		var timesDiff = moment().diff(moment.unix(newFirstTrain), "minutes");
+		var remainder = moment().diff(moment.unix(newFirstTrain), "minutes") % newFrequency;
+		var minutes = newFrequency - remainder;
+
+		var arrival = moment().add(minutes, "m").format("hh:mm A");
+		console.log(minutes);
+		console.log(arrival);
+		console.log(moment().format("X"));
+
+		loop = [];
+		loop.push(newName, newDestination, newFrequency, arrival, minutes);
+
+		var tr = $("<tr>");
+		for (i = 0; i < loop.length ; i++) {
+			var td = $("<td>");
+			td.append(loop[i]);
+			tr.append(td);
+		}
+
+		$("#train-schedule").append(tr);
+
+		}, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
 
 });
+
+
+
 
 
 

@@ -15,7 +15,9 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery.js"></script>
 
-<!--Firebase-->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
 
 </head>
 <body>
@@ -33,7 +35,7 @@
 
 			<div class="card-header" id="sch-header">Current Train Schedule</div>
 
-			<table class="table">
+			<table class="table" id="train-schedule">
 			  <thead>
 			    <tr>
 			      <th>Train Name</th>
@@ -81,7 +83,7 @@
 							</div>
 
 							<div class="form-group row">
-							  <label for="frequency-input" class="col-2 col-form-label">Frequency (HH:mm - military time)</label>
+							  <label for="frequency-input" class="col-2 col-form-label">Frequency (mins)</label>
 							  <div class="col-10">
 							    <input class="form-control" type="number" id="frequency-input">
 							  </div>
