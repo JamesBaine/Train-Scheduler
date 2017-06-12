@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Train Time!</title>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">>
+<link href="https://fonts.googleapis.com/css?family=Monoton|Ubuntu" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css"
 
@@ -14,22 +16,22 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <!--Firebase-->
-<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
 </head>
 <body>
 
 	<div class="container">
 
-		<div class="jumbotron jumbotron-fluid" id="main-header">
+		<div class="jumbotron jumbotron-fluid mb-0" id="main-header">
 		  <div class="container text-center">
 		    <h1 class="display-3 d-inline-block p-2" id="banner">Train Time!</h1>
 		    <img src="assets/images/train.png" class="d-inline-block" id="train">
 		  </div>
 		</div>
 
-		<div class="card" id="current-schedule">
+		<div class="card border-0" id="current-schedule">
 
-			<div class="card-header text-white" id="sch-header">Current Train Schedule</div>
+			<div class="card-header" id="sch-header">Current Train Schedule</div>
 
 			<table class="table">
 			  <thead>
@@ -42,34 +44,14 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>			     
-			      <td>Trenton Express</td>
-			      <td>Trenton</td>
-			      <td>17</td>
-			      <td>05:35 PM</td>
-			      <td>10</td>
-			    </tr>
-			    <tr>			      
-			      <td>Trenton Express</td>
-			      <td>Trenton</td>
-			      <td>17</td>
-			      <td>05:35 PM</td>
-			      <td>10</td>
-			    </tr>
-			    <tr>			 
-			      <td>Trenton Express</td>
-			      <td>Trenton</td>
-			      <td>17</td>
-			      <td>05:35 PM</td>
-			      <td>10</td>
-			    </tr>
+			    
 			  </tbody>
 			</table>
 			</div>
 
-			<div class="card my-3" id="add-train">
+			<div class="card my-3 border-0" id="new-train">
 
-				<div class="card-header text-white" id="add-header">Add Train</div>
+				<div class="card-header" id="add-header">Add Train</div>
 
 				<div class="card-body py-3">
 
@@ -78,9 +60,9 @@
 						<form>
 
 							<div class="form-group row">
-							  <label for="train-name-input" class="col-2 col-form-label">Train Name</label>
+							  <label for="name-input" class="col-2 col-form-label">Train Name</label>
 							  <div class="col-10">
-							    <input class="form-control" type="text" id="train-name-input">
+							    <input class="form-control" type="text" id="name-input">
 							  </div>
 							</div>
 							
@@ -92,20 +74,20 @@
 							</div>
 							
 							<div class="form-group row">
-							  <label for="time-input" class="col-2 col-form-label">First Train Time</label>
+							  <label for="firstTrain-input" class="col-2 col-form-label">First Train Time</label>
 							  <div class="col-10">
-							    <input class="form-control" type="time" id="time-input">
+							    <input class="form-control" type="time" id="firstTrain-input">
 							  </div>
 							</div>
 
 							<div class="form-group row">
 							  <label for="frequency-input" class="col-2 col-form-label">Frequency (HH:mm - military time)</label>
 							  <div class="col-10">
-							    <input class="form-control" type="time" id="frequency-input">
+							    <input class="form-control" type="number" id="frequency-input">
 							  </div>
 							</div>
 
-							<button type="submit" class="btn text-white" id="#submit">Submit</button>
+							<button type="submit" class="btn" id="add-train">Submit</button>
 							
 						</form>
 
@@ -120,6 +102,6 @@
 		</div>
 
 	</div>
-<script src="assets/javascript/app.js"></script>	
+<script type="text/javascript" src="assets/javascript/app.js"></script>	
 </body>
 </html>

@@ -1,5 +1,7 @@
+
 body {
-	background-image: url("../images/background.jpg") ;
+	font-family: 'Ubuntu', sans-serif; 
+   	background:url("../images/background.jpg") center center fixed;
 }
 
 #main-header {
@@ -19,7 +21,12 @@ body {
 	
 }
 
-#current-schedule, #add-train {
-	
+#sch-header, #add-header, button {
+	color: white;
 }
+
+#add-train:hover {
+	color:orange;
+}
+
 
